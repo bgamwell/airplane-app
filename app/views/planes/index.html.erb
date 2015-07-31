@@ -1,0 +1,10 @@
+<h1>Hello, pilots!</h1>
+
+<!-- For loop to list all planes -->
+<% @planes.each do |plane| %>
+  <div>
+  <%= plane.name.titleize %>
+  </div>
+<% end %>
+
+<!-- "titleize" capitalizes the first letter in each word -->

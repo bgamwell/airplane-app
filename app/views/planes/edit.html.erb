@@ -1,0 +1,25 @@
+<!-- <form action="/planes/<%= @plane.id %>" method="post">
+  <input name="_method" type="hidden" value="put">  -->
+
+  <!--allows the html form to complete a put request -->
+
+  <!-- <%= token_tag form_authenticity_token %>
+  <input type="text" name="plane[name]" placeholder="Name" value="<%= @plane.name %>" value="<%= @plane.name %>" autofocus>
+  <input type="text" name="plane[design]" placeholder="Design" value="<%= @plane.design %>" value="<%= @plane.design %>">
+  <textarea name="plane[description]" placeholder="Description"><%= @plane.description %></textarea>
+  <input type="submit" value="Update Plane">
+</form> -->
+
+<!-- Refactored form to update the plane -->
+<%= form_for @plane do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br />
+
+  <%= f.label :design %>
+  <%= f.text_field :design %><br />
+
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+
+  <%= f.submit "Update Plane" %>
+<% end %>
